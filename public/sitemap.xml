@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://your-app.vercel.app/</loc><priority>1.0</priority></url>
-  <url><loc>https://your-app.vercel.app/privacy</loc><priority>0.2</priority></url>
-  <url><loc>https://your-app.vercel.app/terms</loc><priority>0.2</priority></url>
+  <url><loc>https://notionpress-np.vercel.app/</loc><priority>1.0</priority></url>
+  <url><loc>https://notionpress-np.vercel.app/privacy</loc><priority>0.2</priority></url>
+  <url><loc>https://notionpress-np.vercel.app/terms</loc><priority>0.2</priority></url>
 </urlset>

@@ -81,7 +81,7 @@ or paste `schema.sql` into the database's SQL editor.
 1. https://www.notion.so/profile/integrations, new integration.
 2. Type **Public**, installation scope **Any workspace** (cannot be changed later; required for the Marketplace).
 3. Capabilities: **Read content** only.
-4. Redirect URI: `https://YOUR-APP.vercel.app/api/auth/notion/callback`.
+4. Redirect URI: `https://notionpress-np.vercel.app/api/auth/notion/callback`.
 5. Keep the OAuth client ID and secret for step 6.
 
 ### 4. GitHub App
@@ -89,7 +89,7 @@ or paste `schema.sql` into the database's SQL editor.
 GitHub: Settings > Developer settings > GitHub Apps > New GitHub App.
 
 - **Homepage URL:** your Vercel URL.
-- **Callback URL** and **Setup URL:** `https://YOUR-APP.vercel.app/api/github/callback`
+- **Callback URL** and **Setup URL:** `https://notionpress-np.vercel.app/api/github/callback`
 - Turn on **Request user authorization (OAuth) during installation** and **Redirect on update**.
 - **Webhook:** turn Active off.
 - **Repository permissions:** Contents = Read and write. Metadata = Read-only (automatic). Nothing else.
