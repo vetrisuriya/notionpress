@@ -1,0 +1,20 @@
+{
+  "name": "notionpress",
+  "version": "0.2.0",
+  "description": "NotionPress exports a Notion page and its sub-pages as HTML or Markdown and commits them to a GitHub repository.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "dev": "node scripts/dev.js",
+    "preview": "node scripts/preview.js",
+    "migrate": "node scripts/migrate.js",
+    "sync": "node scripts/run-sync.js"
+  },
+  "dependencies": {
+    "pg": "^8.13.0"
+  }
+}

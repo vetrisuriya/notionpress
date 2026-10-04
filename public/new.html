@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New sync · NotionPress</title>
+<link rel="stylesheet" href="/app.css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="brand" id="brand" href="/">NotionPress</a><button id="signout" class="btn secondary small hidden" type="button">Sign out</button></div></header>
+<main class="wrap">
+<div id="flash"></div>
+<h1>New sync</h1>
+<p class="lead">Choose the page to export and where it should go. Sub-pages are included.</p>
+<form class="panel" id="form">
+  <div id="workspace-field" class="hidden">
+    <label for="workspace">Notion workspace</label>
+    <select id="workspace"></select>
+  </div>
+
+  <label for="page">Notion page</label>
+  <input type="search" id="page-search" placeholder="Search pages…" autocomplete="off">
+  <select id="page" required></select>
+  <div id="no-pages" class="field-error hidden">No pages are shared with this integration. Go back to the dashboard, choose "Add or update a workspace", and select the pages to share.</div>
+
+  <label for="installation">GitHub account</label>
+  <select id="installation" required></select>
+
+  <label for="repo">Repository</label>
+  <input type="search" id="repo-search" placeholder="Search repositories…" autocomplete="off">
+  <select id="repo" required></select>
+
+  <div id="public-warning" class="warn hidden">
+    <strong>This repository is public.</strong> Everything you sync will be readable by anyone on the internet.
+    <label class="check"><input type="checkbox" id="confirm-public"> I understand and want to publish these pages publicly.</label>
+  </div>
+
+  <label for="branch">Branch</label>
+  <input type="text" id="branch" value="main" required>
+  <div class="muted">The branch must already exist. A brand-new empty repository needs one commit first, for example a README.</div>
+
+  <label for="target_dir">Folder in the repository</label>
+  <input type="text" id="target_dir" value="notion-docs">
+  <div class="muted">Only files inside this folder are created, updated or removed. Leave empty to use the repository root.</div>
+
+  <label for="frequency">Schedule</label>
+  <select id="frequency">
+    <option value="manual">Only when I click Sync now</option>
+    <option value="hourly">Every hour</option>
+    <option value="daily">Every day</option>
+  </select>
+
+  <label for="export_type">Export as</label>
+  <select id="export_type">
+    <option value="html">HTML — a browsable site with styles</option>
+    <option value="markdown">Markdown (.md) — for docs folders and wikis</option>
+  </select>
+
+  <div class="actions"><button class="btn" id="submit" type="submit">Create sync</button> <a href="/dashboard">Cancel</a></div>
+</form>
+</main>
+<footer class="wrap"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><span class="muted">Made with ♥ by <a href="https://vetrisuriya.in/">vetrisuriya</a></span></footer>
+<script type="module" src="/js/new.js"></script>
+</body>
+</html>
